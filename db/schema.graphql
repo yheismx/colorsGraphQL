@@ -1,0 +1,44 @@
+const { gql} = require('apollo-server');
+
+const typeDefs = gql`
+
+
+    type Color{
+        name: String
+        hex: String
+        rgb: [String]
+    }
+
+    input ColorInput{
+        colorName: String!
+    }
+
+   type Query {
+     
+       #Colors
+        getColors: [Color]
+
+        getColorsRed : [Color]
+
+        getColorsOrange : [Color]
+
+        getColorsYellow : [Color]
+
+        getColorsGreen : [Color]
+
+        getColorsBlue : [Color]
+
+        getColorsPurple : [Color]
+
+        getColorsBrown : [Color]
+
+        getColorsGray : [Color]
+
+        getFilteredColors(input: ColorInput) : [Color]
+
+        # obtenerProducto(id: ID!) : Producto
+   }
+
+`;
+
+module.exports = typeDefs;
