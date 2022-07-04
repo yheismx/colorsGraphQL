@@ -13,7 +13,7 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     cors: {
-        origin: ["https://colorsapp-luisdonaldogomez.netlify.app/"]
+        origin: ["*"]
     },
     
 });
